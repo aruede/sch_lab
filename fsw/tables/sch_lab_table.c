@@ -35,8 +35,6 @@
 #include "sample_app_msgids.h"
 #endif
 
-#include "tec_msgids.h"
-
 #ifdef HAVE_HS
 #include "hs_msgids.h"
 #endif
@@ -57,6 +55,9 @@
 #include "lc_msgids.h"
 #endif
 
+#include "tec_msgids.h"
+#include "sbn_msgids.h"
+
 /*
 ** SCH Lab schedule table
 ** When populating this table:
@@ -76,7 +77,8 @@ SCH_LAB_ScheduleTable_t SCH_LAB_ScheduleTable = {
         {CFE_SB_MSGID_WRAP_VALUE(CFE_EVS_SEND_HK_MID), 96, 0},
 
 
-{CFE_SB_MSGID_WRAP_VALUE(TEC_SEND_HK_MID), 104, 0},
+        {CFE_SB_MSGID_WRAP_VALUE(SBN_CMD_MID), 4, 0},
+        {CFE_SB_MSGID_WRAP_VALUE(TEC_SEND_HK_MID), 104, 0},
 
 /* Example of including additional open source apps  */
 #ifdef HAVE_CI_LAB
